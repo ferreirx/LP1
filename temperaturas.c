@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
-	int temps[50];
+	int temps[50], quantidade = 0;
 	float media = 0, soma = 0;
 	for (int i = 0; i < 50; i++){
 		scanf("%d",&temps[i]);
@@ -12,12 +12,12 @@ int main(){
 	}
 	media = soma/50;
 	printf("Media: %.2f\n",media);
-	printf("Temperaturas acima da média: ");
 	for (int i = 0; i < 50; i++){
 		if (temps[i] > media){
-			printf("%d ",temps[i]);
+			quantidade+=1;
 		}
 	}
+	printf("Quantidade de temperaturas acima da media: %d",quantidade);
 
 	return 0;
 }
